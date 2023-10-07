@@ -1,52 +1,103 @@
-[
+
+  [
     {
       "id": 1,
       "title": "Pohela Boishakh Festival",
       "image": "https://i.ibb.co/wsVdh29/Pohela-Boishak.jpg",
-      "description": "Pohela Boishakh, the Bengali New Year, is a vibrant and colorful festival celebrated with great enthusiasm in Bangladesh. The festivities mark the arrival of spring and the start of a new year in the Bengali calendar. People dress in traditional attires, with women donning sarees and men wearing panjabis. The day begins with a traditional procession, featuring colorful floats, traditional music, and dance performances. Food stalls offer mouthwatering Bengali delicacies such as pitha, sweets, and traditional rice dishes. It's a time for family gatherings and cultural programs, showcasing the rich heritage of Bangladesh.",
-      "price": 25000
+      "description": "Pohela Boishakh, the Bengali New Year, is a vibrant and colorful festival celebrated with great enthusiasm in Bangladesh. The festivities mark the arrival of spring and the start of a new year in the Bengali calendar. People dress in traditional attires, with women willDonning sarees and men wearing panjabis. The day begins with a traditional procession, featuring colorful floats, traditional music, and dance performances. Food stalls offer mouthwatering Bengali delicacies such as pitha, sweets, and traditional rice dishes. It's a time for family gatherings and cultural programs, showcasing the rich heritage of Bangladesh.",
+      "price": 25000,
+      "willDo": [
+        "Organize and manage cultural festivals and events",
+        "Provide event planning and coordination services",
+        "Promote and celebrate the cultural heritage of Bangladesh",
+        "Curate a diverse range of traditional and modern activities",
+        "Create memorable experiences for attendees"
+      ]
     },
     {
       "id": 2,
       "title": "Nouka Bichar Festival",
       "image": "https://i.ibb.co/26P800x/Nouka-Bich.jpg",
       "description": "Nouka Bichar, also known as the Boat Racing Festival, is a thrilling and competitive event celebrated in various water bodies across Bangladesh. Teams from different regions compete in traditional boat races. The long, slender boats are beautifully decorated, and rowers paddle vigorously to the beat of traditional drums. Spectators gather along the banks to cheer for their favorite teams, creating an electrifying atmosphere. The festival promotes teamwork, skill, and the rich maritime heritage of Bangladesh.",
-      "price": 22000
+      "price": 22000,
+      "willDo": [
+        "Organize and oversee boat racing events",
+        "Coordinate team registrations and race logistics",
+        "Celebrate and preserve the maritime traditions of Bangladesh",
+        "Engage spectators in exciting and competitive races",
+        "Foster a sense of unity through sportsmanship"
+      ]
     },
     {
       "id": 3,
       "title": "Victory Day Celebration",
-      "image": " https://i.ibb.co/Srm0Kv0/victoryday.jpg",
-      "description": "Victory Day in Bangladesh commemorates the country's victory over Pakistan in the 1971 Liberation War. It is a day of remembrance, gratitude, and national pride. The day typically begins with a grand military parade, showcasing the strength and unity of the Bangladeshi armed forces. Cultural events, including traditional dances and songs, are held to honor the sacrifices made during the war. The day's significance is amplified by the display of national flags and tributes to the freedom fighters. Victory Day is a time to reflect on the nation's history and the price paid for independence.",
-      "price": 30000
+      "image": "https://i.ibb.co/Srm0Kv0/victoryday.jpg",
+      "description": "Victory Day in Bangladesh commemorates the country's victory over Pakistan in the 1971 Liberation War. It is a day of remembrance, gratitude, and national pride. The day typically begins with a grand military parade, showcasing the strength and unity of the Bangladeshi armed forces. Cultural events, including traditional dances and songs, are held to honor the sacrifices made during the war. The day's significance is amplified by the display of national flags and tributes to the freewillDom fighters. Victory Day is a time to reflect on the nation's history and the price paid for independence.",
+      "price": 30000,
+      "willDo": [
+        "Organize and manage Victory Day celebrations",
+        "Coordinate military parades and cultural performances",
+        "Pay tribute to freewillDom fighters and national heroes",
+        "Educate and inspire the younger generation about history",
+        "Promote patriotism and unity among the people"
+      ]
     },
     {
       "id": 4,
       "title": "Boishakhi Mela Extravaganza",
       "image": "https://i.ibb.co/NTHmcSm/boishaki-Mela.jpg",
       "description": "Boishakhi Mela is a vibrant and bustling fair that celebrates Bengali culture and traditions. The event features a wide array of stalls offering handicrafts, traditional clothing, and mouthwatering Bengali street food. Visitors can enjoy live music and dance performances, including the famous Baul songs. The fair is a sensory delight, with the aroma of freshly cooked jilapis and pithas filling the air. It's a great opportunity to immerse yourself in the rich cultural heritage of Bangladesh.",
-      "price": 25000
+      "price": 25000,
+      "willDo": [
+        "Organize and manage cultural fairs and festivals",
+        "Curate a diverse range of traditional and modern stalls",
+        "Promote and celebrate the vibrant Bengali culture",
+        "Offer a platform for artisans and performers",
+        "Create memorable and immersive cultural experiences"
+      ]
     },
     {
       "id": 5,
       "title": "Ekushe Boimela Book Fair",
       "image": "https://i.ibb.co/HGRJHYD/Book.jpg",
       "description": "Ekushe Boimela is an annual book fair held in Dhaka, Bangladesh. It's a paradise for book lovers, featuring a vast collection of books from various genres, including literature, history, science, and more. The fair is dedicated to commemorating Language Martyrs' Day, a tribute to those who sacrificed their lives for the Bengali language during the Language Movement in 1952. Authors, poets, and intellectuals gather to discuss literature and culture. The fair provides a platform for emerging writers to showcase their works and engage with readers.",
-      "price": 22000
+      "price": 22000,
+      "willDo": [
+        "Organize and manage book fairs and literary events",
+        "Curate an extensive collection of books from various genres",
+        "Promote Bengali language and literature",
+        "Facilitate interactions between authors and readers",
+        "Support emerging writers and literary talents"
+      ]
     },
     {
       "id": 6,
       "title": "Parades and Cultural Showcase",
-      "image": "https://i.ibb.co/DCNYVC0/Pared-Compition.png",
-      "description": "Bangladesh hosts grand parades and cultural showcases throughout the year to celebrate its rich heritage. These events feature traditional dance performances, folk music, and colorful processions. Floats adorned with cultural symbols and historical figures captivate the audience. These parades aim to preserve and promote the diverse traditions of Bangladesh while fostering a sense of unity and patriotism among the people. The vibrant costumes, lively music, and captivating performances make these parades a visual feast for spectators.",
-      "price": 23000
+      "image": "https://i.ibb.co/DCNYVC0/Pared-Compition.png ",
+      "description": "Bangladesh hosts grand parades and cultural showcases throughout the year to celebrate its rich heritage. These events feature traditional dance performances, folk music, and colorful processions. Floats awillDorned with cultural symbols and historical figures captivate the audience. These parades aim to preserve and promote the diverse traditions of Bangladesh while fostering a sense of unity and patriotism among the people. The vibrant costumes, lively music, and captivating performances make these parades a visual feast for spectators.",
+      "price": 23000,
+      "willDo": [
+        "Organize and coordinate grand parades and cultural events",
+        "Showcase traditional dances, music, and cultural diversity",
+        "Highlight historical and cultural significance",
+        "Foster patriotism and unity through cultural celebrations",
+        "Create visually stunning and memorable events"
+      ]
     },
     {
       "id": 7,
       "title": "Village Fair Extravaganza",
       "image": "https://i.ibb.co/pdSMx8z/Fair.jpg",
       "description": "Village fairs are an integral part of rural life in Bangladesh. These fairs bring together communities, showcasing their local crafts, agricultural products, and cultural heritage. Visitors can explore stalls selling handmade textiles, pottery, and delicious traditional snacks. Musical performances, folk dances, and rural games entertain the crowd. The fair provides a glimpse into the simplicity and charm of village life in Bangladesh, offering a unique and enriching experience for all.",
-      "price": 20000
+      "price": 20000,
+      "willDo": [
+        "Organize and manage village fairs and community events",
+        "Promote local crafts, agriculture, and cultural traditions",
+        "Create opportunities for rural communities to showcase their talents",
+        "Entertain visitors with traditional music and folk dances",
+        "Preserve and celebrate the essence of village life"
+      ]
     }
   ]
+  
   
