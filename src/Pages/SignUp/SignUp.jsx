@@ -1,10 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../../Component/NavBar/NavBar";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/Provider";
 
 const SignUp = () => {
-    const {userCreateWithEmailPassword}=useContext(AuthContext)
+    const {userCreateWithEmailPassword, isLoading}=useContext(AuthContext);
+    const location =useLocation();
+      const navigate = useNavigate();
+
+    
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-[100vh] w-full">
+        <span className="loading loading-spinner loading-lg text-red-500"></span>
+      </div>
+    );
+  }
+
     const handelRegForm=(e)=>{
         e.preventDefault();
         const data= new FormData(e.currentTarget);
@@ -15,6 +27,13 @@ const SignUp = () => {
         const password= data.get("password");
         console.log(photo.name)
         userCreateWithEmailPassword(email, password)
+        .then((result) => {
+          console.log(result);
+          navigate(location.state? location.state : '/')
+      })
+      .catch((error) => {
+          console.log(error);
+      });
     }
   return (
     <div>

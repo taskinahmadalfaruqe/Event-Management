@@ -31,26 +31,21 @@ const Provider = ({children}) => {
               icon: 'success',
               title: 'SuccessFully Purchased',
               showConfirmButton: true,
-              timer: 2000
+              timer: 2000,
              })
         }
     }
     // create user with email and password
     const userCreateWithEmailPassword = (email, password) => {
         setLoading(true);
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                console.log(result);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        return createUserWithEmailAndPassword(auth, email, password)
+            
     };
 
     //login with email and password
     const loginWithEmailPassword = (email, password) => {
         setLoading(true);
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
     };
 
     const logout = () => {

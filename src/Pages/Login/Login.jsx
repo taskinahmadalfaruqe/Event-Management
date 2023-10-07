@@ -2,21 +2,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../../Component/NavBar/NavBar";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/Provider";
+import Swal from 'sweetalert2'
 
 const Login = () => {
-  const { loginWithEmailPassword, isLoading } = useContext(AuthContext);
+  const { loginWithEmailPassword } = useContext(AuthContext);
   const location = useLocation();
 
   const navigate = useNavigate();
 
 
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-[100vh] w-full">
-        <span className="loading loading-spinner loading-lg text-red-500"></span>
-      </div>
-    );
-  }
+
 
   
 
@@ -28,19 +23,25 @@ const Login = () => {
     const password = data.get("password");
 
     loginWithEmailPassword(email, password)
-    navigate(location?.state? location.state : "/");
-
-    // .then((res)=>{
-    //     if(res){
-            
-    //     }
-    // })
-    // .catch((err)=>{
-    //   console.log(err)
-    // })
-      
-
+    .then((res)=>{
+      if(res){
+          navigate(location?.state? location.state : "/");
+          alert(res)
+        }
+    })
+    .catch((err)=>{
+      Swal.fire({
+        icon: 'error',
+        title: 'Something went wrong!',
+        text: `${err}`,
+        footer: "<Link to={'/'}>Go To Home</Link>",
+        showConfirmButton: true,
+      })
+      handelForm();
+    
+    })
   }
+
   return (
     <div className="space-y-10">
       <NavBar></NavBar>
@@ -129,6 +130,7 @@ const Login = () => {
             <p className="mt-6 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">
               Don not have an account?
               <Link
+                state={location.state}
                 to={"/signUp"}
                 className="ml-1 block font-sans text-sm font-bold leading-normal text-purple-500 antialiased"
               >

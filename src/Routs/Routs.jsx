@@ -42,7 +42,7 @@ export const Routs = createBrowserRouter([
         },
         {
             path: '/signUp',
-            element: <SignUp></SignUp>
+            element: <SignUp></SignUp>,
         },
         {
             path: '/cultural/:id',
