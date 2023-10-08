@@ -37,8 +37,8 @@ const Login = () => {
           icon: "error",
           title: "Something went wrong!",
           text: `${err}`,
-          footer: "<Link to={'/'}>Go To Home</Link>",
           showConfirmButton: true,
+          timer: 5000,
         });
       });
   };
@@ -62,8 +62,8 @@ const Login = () => {
           icon: "error",
           title: "Something went wrong!",
           text: `${err}`,
-          footer: "<Link to={'/'}>Go To Home</Link>",
           showConfirmButton: true,
+          timer: 5000,
         });
       });
   };

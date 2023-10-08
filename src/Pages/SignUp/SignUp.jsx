@@ -2,20 +2,12 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../../Component/NavBar/NavBar";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/Provider";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
-    const {userCreateWithEmailPassword, isLoading}=useContext(AuthContext);
+    const {userCreateWithEmailPassword}=useContext(AuthContext);
     const location =useLocation();
       const navigate = useNavigate();
-
-    
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-[100vh] w-full">
-        <span className="loading loading-spinner loading-lg text-red-500"></span>
-      </div>
-    );
-  }
 
     const handelRegForm=(e)=>{
         e.preventDefault();
@@ -27,12 +19,26 @@ const SignUp = () => {
         const password= data.get("password");
         console.log(photo.name)
         userCreateWithEmailPassword(email, password)
-        .then((result) => {
-          console.log(result);
-          navigate(location.state? location.state : '/')
+        .then((res) => {
+          if(res){
+            navigate(location.state? location.state : '/');
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "SuccessFully Login",
+            showConfirmButton: true,
+            timer: 2000,
+          });
+          }
       })
-      .catch((error) => {
-          console.log(error);
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Something went wrong!",
+          text: `${err}`,
+          showConfirmButton: true,
+          timer: 5000,
+        });
       });
     }
   return (

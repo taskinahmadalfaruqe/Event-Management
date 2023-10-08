@@ -5,6 +5,7 @@ import { AuthContext } from "../../Provider/Provider";
 
 const NavBar = () => {
   const { user, logout } = useContext(AuthContext);
+  console.log(user);
   const NavBar = (
     <div className="flex flex-col gap-5 lg:flex-row justify-start lg:justify-center lg:items-center">
       <NavLink
@@ -12,7 +13,8 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? "bg-purple-500 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md"
-            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 rounded-md"
+            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 round" +
+              "ed-md"
         }
       >
         Home
@@ -22,7 +24,8 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? "bg-purple-500 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md"
-            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 rounded-md"
+            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 round" +
+              "ed-md"
         }
       >
         Services
@@ -32,7 +35,8 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? "bg-purple-500 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md"
-            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 rounded-md"
+            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 round" +
+              "ed-md"
         }
       >
         Purchased
@@ -42,14 +46,24 @@ const NavBar = () => {
         className={({ isActive }) =>
           isActive
             ? "bg-purple-500 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md"
-            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 rounded-md"
+            : " hover:bg-purple-300 font-semibold text-lg uppercase text-black p-1 px-3 round" +
+              "ed-md"
         }
       >
         About
       </NavLink>
+      <div className="flex flex-col lg:flex-row gap-5 justify-center items-center">
+        <div className="w-12 h-12 rounded-full bg-purple-500 overflow-hidden">
+          {user?(user && (user.photoURL? <img className="h-full w-full" src={user.photoURL} alt="User" />: <img src="https://i.ibb.co/2nC8FF4/user.webp"></img> )) :(<img src="https://i.ibb.co/2nC8FF4/user.webp"></img> )}
+        </div>
+        <div>{user && (user.displayName ? user.displayName : user.email)}</div>
+      </div>
       {user ? (
         <Link>
-          <button onClick={logout} className="btn border-purple-700 bg-purple-500 hover:bg-white hover:text-purple-700 hover:border-purple-700 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md">
+          <button
+            onClick={logout}
+            className="btn border-purple-700 bg-purple-500 hover:bg-white hover:text-purple-700 hover:border-purple-700 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md"
+          >
             logout
           </button>
         </Link>
