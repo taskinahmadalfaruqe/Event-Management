@@ -1,0 +1,37 @@
+[
+    {
+      "name": "Alice Johnson",
+      "client_say": "I had a wonderful experience with this service!",
+      "rating": 5,
+      "client_img": "https://i.ibb.co/BnFTnd9/C2w.jpg",
+      "gender": "female"
+    },
+    {
+      "name": "John Smith",
+      "client_say": "The service was excellent and highly professional.",
+      "rating": 4,
+      "client_img": "https://i.ibb.co/3WcQ6dp/c3.jpg",
+      "gender": "male"
+    },
+    {
+      "name": "Emily Davis",
+      "client_say": "I'm very satisfied with the quality of service provided.",
+      "rating": 5,
+      "client_img": "https://i.ibb.co/Cmbgrkh/C1w.jpg",
+      "gender": "female"
+    },
+    {
+      "name": "Michael Brown",
+      "client_say": "Good service, but there is room for improvement.",
+      "rating": 3,
+      "client_img": "https://i.ibb.co/y8G04Wq/c2.jpg",
+      "gender": "male"
+    },
+    {
+      "name": "Sarah Wilson",
+      "client_say": "Overall, a pleasant experience. I would recommend it.",
+      "rating": 4,
+      "client_img": "https://i.ibb.co/PQgfq8L/c1.jpg",
+      "gender": "male"
+    }
+  ]

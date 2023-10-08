@@ -9,7 +9,6 @@ import "./teamCard.css";
 const LodeTeamMember = ({ singleData }) => {
   const { name,image, title, social_media } = singleData;
   const {facebook, instagram, github, whatsapp}=social_media;
-  console.log(singleData);
   return (
     <div className="teamCard transition-all duration-1000 p-5 border border-purple-500 rounded-md space-y-4">
       <div className="img h-[285px] w-full overflow-hidden relative ">

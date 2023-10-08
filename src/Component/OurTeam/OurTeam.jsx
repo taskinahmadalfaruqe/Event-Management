@@ -10,10 +10,9 @@ const OurTeam = () => {
       .then((data) => setTeamMembers(data));
   }, []);
 
-  console.log(teamMembers);
   return (
     <div className="">
-      <div className="bg-[#eee] mt-5 lg:mt-10  md:p-5 rounded-md">
+      <div className=" mt-5 lg:mt-10  md:p-5 rounded-md">
         <div className="my-5 mx-auto max-w-2xl space-y-5 text-center p-2 md:p-4">
           <h2 className="font-Oswald  text-3xl font-semibold text-purple-500 ">
             Our Team
