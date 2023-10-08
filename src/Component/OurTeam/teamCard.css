@@ -1,0 +1,15 @@
+.teamCard{
+    transition:  all linear .5s;
+    -webkit-transition:  all linear .5s;
+    -moz-transition:  all linear .5s;
+    -ms-transition:  all linear .5s;
+    -o-transition:  all linear .5s;
+}
+.teamCard:hover .teamIcon{
+    display: flex;
+    transition:  all linear .5s;
+    -webkit-transition:  all linear .5s;
+    -moz-transition:  all linear .5s;
+    -ms-transition:  all linear .5s;
+    -o-transition:  all linear .5s;
+}

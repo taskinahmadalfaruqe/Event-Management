@@ -26,7 +26,13 @@ const Login = () => {
     .then((res)=>{
       if(res){
           navigate(location?.state? location.state : "/");
-          alert(res)
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'SuccessFully Purchased',
+            showConfirmButton: true,
+            timer: 2000,
+           })
         }
     })
     .catch((err)=>{

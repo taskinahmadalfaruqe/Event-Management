@@ -2,22 +2,44 @@ import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import NavBar from "../../Component/NavBar/NavBar";
 import { AuthContext } from "../../Provider/Provider";
+import Swal from 'sweetalert2'
+
 
 const ServiceDetails = () => {
-  const { isLoading,handelPurchasedData } = useContext(AuthContext);
+  const { isLoading, handelPurchasedData } = useContext(AuthContext);
 
   const [data, setData] = useState({});
   const singleData = useLoaderData();
   const { id } = useParams();
 
-
+  const handelPurchasedBTN = (data) => {
+    const addCardInStorage = [];
+    const localStorageCard = JSON.parse(localStorage.getItem("items"));
+    if (!localStorageCard) {
+      handelPurchasedData(data);
+      addCardInStorage.push(data);
+      localStorage.setItem("items", JSON.stringify(addCardInStorage));
+    } else {
+      const isExist = localStorageCard.find((val) => val.id == id);
+      if (isExist) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'You Are Already Purchased This',
+          footer: '<a href="">Why do I have this issue?</a>'
+      });
+      } else {
+        handelPurchasedData(data);
+        addCardInStorage.push(...localStorageCard, data);
+        localStorage.setItem("items", JSON.stringify(addCardInStorage));
+      }
+    }
+  };
 
   useEffect(() => {
     const findData = singleData.find((value) => value.id == id);
     setData(findData);
   }, [id, singleData]);
-  
-
 
   if (isLoading) {
     return (
@@ -32,8 +54,9 @@ const ServiceDetails = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavBar></NavBar>
       <div className=" mt-5 flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+        
         <div className="p-2 md:p-5  overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
           <img
             src={image}
@@ -63,6 +86,7 @@ const ServiceDetails = () => {
               </p>
             ))}
           </div>
+
         </div>
 
         <div className="p-6 pt-0 flex flex-col md:flex-row justify-between gap-5 ">
@@ -70,7 +94,9 @@ const ServiceDetails = () => {
             className="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none flex flex-row gap-2"
             type="button"
             data-ripple-dark="true"
-            onClick={()=>{handelPurchasedData(data)}}
+            onClick={() => {
+              handelPurchasedBTN(data);
+            }}
           >
             Purchased
             <svg
@@ -93,6 +119,7 @@ const ServiceDetails = () => {
             Price {price} bdt
           </button>
         </div>
+
       </div>
     </div>
   );

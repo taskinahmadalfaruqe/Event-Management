@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "image": "https://i.ibb.co/949dbmC/Man-01.jpg",
+        "title": "Cultural  Engineer",
+        "social_media": {
+            "facebook": "https://www.facebook.com/johndoe",
+            "whatsapp": "https://wa.me/1234567890",
+            "instagram": "https://www.instagram.com/johndoe",
+            "github": "https://github.com/johndoe"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "image": "https://i.ibb.co/PrX90Xc/Womane-02.jpg",
+        "title": "Event Manager",
+        "social_media": {
+            "facebook": "https://www.facebook.com/janesmith",
+            "whatsapp": "https://wa.me/9876543210",
+            "instagram": "https://www.instagram.com/janesmith",
+            "github": "https://github.com/janesmith"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Alice Johnson",
+        "image": "https://i.ibb.co/0CQHM97/Man-02.jpg",
+        "title": "Marketing Specialist",
+        "social_media": {
+            "facebook": "https://www.facebook.com/alicejohnson",
+            "whatsapp": "https://wa.me/5555555555",
+            "instagram": "https://www.instagram.com/alicejohnson",
+            "github": "https://github.com/alicejohnson"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Bob Wilson",
+        "image": "https://i.ibb.co/pjHB3fW/Womane-01.jpg",
+        "title": "Interior Designer",
+        "social_media": {
+            "facebook": "https://www.facebook.com/bobwilson",
+            "whatsapp": "https://wa.me/9999999999",
+            "instagram": "https://www.instagram.com/bobwilson",
+            "github": "https://github.com/bobwilson"
+        }
+    }
+]
