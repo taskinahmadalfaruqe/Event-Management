@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import NavBar from "../../Component/NavBar/NavBar";
 import { AuthContext } from "../../Provider/Provider";
 import Swal from 'sweetalert2'
+import Footer from "../../Component/Footer/Footer";
 
 
 const ServiceDetails = () => {
@@ -121,6 +122,7 @@ const ServiceDetails = () => {
         </div>
 
       </div>
+      <Footer></Footer>
     </div>
   );
 };

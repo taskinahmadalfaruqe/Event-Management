@@ -48,7 +48,7 @@ const Banner = () => {
                 backgroundSize: "cover",
               }}
             >
-              <div className="flex justify-center items-center flex-col bg-black opacity-70 w-[100vw]  text-white text-xl lg:text-2xl text-center h-[90vh] space-y-3  md:space-y-6 p-5">
+              <div className="flex justify-center items-center flex-col bg-black opacity-60 w-[100vw]  text-white text-xl lg:text-2xl text-center h-[90vh] space-y-3  md:space-y-6 p-5">
                 <h1 className=" text-2xl lg:text-3xl font-bold font-Roboto tracking-[.15em]">
                   {singleData.title}
                 </h1>
