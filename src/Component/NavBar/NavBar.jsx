@@ -63,7 +63,7 @@ const NavBar = () => {
     </div>
   );
   return (
-    <div className=" font-Oswald flex justify-between items-center ">
+    <div className=" font-Oswald flex justify-between items-center py-2 ">
       <div className="  logo  text-2xl font-bold text-pink-600">
         <Link to={"/"}>Cultural Event</Link>
       </div>

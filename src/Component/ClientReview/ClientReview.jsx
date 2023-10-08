@@ -17,8 +17,8 @@ const ClientReview = () => {
   }, []);
 
   return (
-    <div>
-      <div className="text-center my-5 lg:my-10 max-w-2xl mx-auto space-y-5 text-base">
+    <div className="my-5">
+      <div className="text-center  lg:my-10 max-w-2xl mx-auto space-y-5 text-base">
         <h2 className="text-2xl font-bold text-purple-500 font-Oswald">
           Client Say
         </h2>
