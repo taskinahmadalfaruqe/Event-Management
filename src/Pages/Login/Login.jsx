@@ -2,18 +2,15 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../../Component/NavBar/NavBar";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/Provider";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const { loginWithEmailPassword } = useContext(AuthContext);
+  const { loginWithEmailPassword, loginWithGoogle } = useContext(AuthContext);
   const location = useLocation();
-
   const navigate = useNavigate();
 
-
-
-
-  
+  const googleProvider = new GoogleAuthProvider();
 
   const handelForm = (e) => {
     e.preventDefault();
@@ -23,35 +20,58 @@ const Login = () => {
     const password = data.get("password");
 
     loginWithEmailPassword(email, password)
-    .then((res)=>{
-      if(res){
-          navigate(location?.state? location.state : "/");
+      .then((res) => {
+        if (res) {
+          navigate(location?.state ? location.state : "/");
           Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'SuccessFully Login',
+            position: "center",
+            icon: "success",
+            title: "SuccessFully Login",
             showConfirmButton: true,
             timer: 2000,
-           })
+          });
         }
-    })
-    .catch((err)=>{
-      Swal.fire({
-        icon: 'error',
-        title: 'Something went wrong!',
-        text: `${err}`,
-        footer: "<Link to={'/'}>Go To Home</Link>",
-        showConfirmButton: true,
       })
-      handelForm();
-    
-    })
-  }
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Something went wrong!",
+          text: `${err}`,
+          footer: "<Link to={'/'}>Go To Home</Link>",
+          showConfirmButton: true,
+        });
+      });
+  };
+  
+  const handelGoogleLogin = () => {
+    loginWithGoogle(googleProvider)
+      .then((res) => {
+        if (res) {
+          navigate(location?.state ? location.state : "/");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "SuccessFully Login",
+            showConfirmButton: true,
+            timer: 2000,
+          });
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Something went wrong!",
+          text: `${err}`,
+          footer: "<Link to={'/'}>Go To Home</Link>",
+          showConfirmButton: true,
+        });
+      });
+  };
 
   return (
     <div className="space-y-10">
       <NavBar></NavBar>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center flex-col relative">
         <form
           onSubmit={handelForm}
           className="relative flex  w-full md:w-3/4 lg:w-2/3 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
@@ -145,6 +165,16 @@ const Login = () => {
             </p>
           </div>
         </form>
+        <div className="flex justify-center items-center mb-5 absolute -bottom-[10%]">
+          <button
+            className="block w-full select-none rounded-lg bg-gradient-to-tr from-purple-600 to-purple-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-purple-500/20 transition-all hover:shadow-lg hover:shadow-purple-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="submit"
+            data-ripple-light="true"
+            onClick={handelGoogleLogin}
+          >
+            Log In With Google
+          </button>
+        </div>
       </div>
     </div>
   );

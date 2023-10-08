@@ -1,17 +1,23 @@
-import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth";
 import {app} from "../Firebase.config";
 import {createContext, useEffect, useState} from "react";
 import PropTypes from "prop-types";
 import Swal from 'sweetalert2'
 
-const auth = getAuth(app);
+
+
+
+
+
 export const AuthContext = createContext(null);
 
 const Provider = ({children}) => {
     const [user, setUser] = useState(null);
     const [isLoading, setLoading] = useState(true);
     const [purchasedData, setPurchasedData] = useState([]);
-
+    
+    const auth = getAuth(app);
+    
     const handelPurchasedData = (data) => {
         const newData = purchasedData.find((value) => value.id == data.id)
         if (newData) {
@@ -47,6 +53,10 @@ const Provider = ({children}) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     };
+    const loginWithGoogle=(googleProvider)=>{
+        setLoading(true)
+        return signInWithPopup(auth, googleProvider);
+    }
 
     const logout = () => {
         setLoading(true);
@@ -72,7 +82,8 @@ const Provider = ({children}) => {
         userCreateWithEmailPassword,
         loginWithEmailPassword,
         logout,
-        handelPurchasedData
+        handelPurchasedData,
+        loginWithGoogle,
     };
     return (
         <div>

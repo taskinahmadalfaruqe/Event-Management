@@ -82,9 +82,9 @@ const ServiceDetails = () => {
               We Will Do For You
             </h2>
             {willDo?.map((data, index) => (
-              <p className="pl-3  font-medium" key={index}>
+              <div className="pl-3  font-medium" key={index}>
                 {++count}: {data}
-              </p>
+              </div>
             ))}
           </div>
 
