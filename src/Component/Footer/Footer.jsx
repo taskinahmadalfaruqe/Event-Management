@@ -9,7 +9,7 @@ import { BsWhatsapp } from "react-icons/bs";
 const Footer = () => {
   const { user,logout } = useContext(AuthContext);
   return (
-    <footer className="text-2xl py-10 text-center font-semibold uppercase text-purple-500 font-Roboto  md:p-5 ">
+    <footer className="bg-purple-200 rounded-md text-2xl mt-5 py-10 text-center font-semibold uppercase text-purple-500 font-Roboto  md:p-5 ">
       <div className="mt-7 flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 border-t-2 border-purple-500 border-blue-gray-50 py-6  lg:justify-between text-xl">
         <p className="block  leading-relaxed  antialiased">
           &copy; 2023 Community and Cultural Events
