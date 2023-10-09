@@ -12,7 +12,7 @@ const LodeProgram = ({ singleData }) => {
   let count = 0;
 
   return (
-    <div data-aos="fade-up-left" data-aos-duration="2000" className=" mt-5 relative flex flex-col  w-full  lg:flex-row rounded-xl bg-white bg-clip-border text-black shadow-md">
+    <div data-aos="fade-up" data-aos-duration="2000" className=" mt-5 relative flex flex-col  w-full  lg:flex-row rounded-xl bg-white bg-clip-border text-black shadow-md">
       <div className="relative p-2 w-full m-0 lg:w-2/5 shrink-0 overflow-hidden rounded-md rounded-r-none bg-white bg-clip-border">
         <img
           src={image}

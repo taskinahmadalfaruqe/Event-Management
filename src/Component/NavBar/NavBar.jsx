@@ -78,11 +78,20 @@ const NavBar = () => {
           </button>
         </Link>
       ) : (
-        <Link to={"/login"}>
+      
+        <div className="flex gap-5 flex-col lg:flex-row">
+          <Link to={"/login"}>
           <button className="btn border-purple-700 bg-purple-500 hover:bg-white hover:text-purple-700 hover:border-purple-700 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md">
             login
           </button>
         </Link>
+          <Link to={"/signUp"}>
+          <button className="btn border-purple-700 bg-purple-500 hover:bg-white hover:text-purple-700 hover:border-purple-700 font-semibold text-lg uppercase text-white p-1 px-3 rounded-md">
+            Resister
+          </button>
+        </Link>
+        </div>
+        
       )}
     </div>
   );
