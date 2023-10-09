@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const LodePurchased = ({ singleItem }) => {
   const { price, title, image, id } = singleItem;
-  console.log(singleItem);
   return (
     <div className="flex flex-col mt-5 justify-center text-center lg:flex-row lg:justify-between items-center gap-5 border border-purple-500 rounded-md p-5">
       <div className="w-20 h-20 rounded-full overflow-hidden flex justify-center items-center">
