@@ -24,7 +24,6 @@ const Provider = ({ children }) => {
   const handelPurchasedData = (data) => {
     const newData = purchasedData.find((value) => value.id == data.id);
     if (newData) {
-      setLoading(true)
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -33,7 +32,6 @@ const Provider = ({ children }) => {
       });
     } else {
       setPurchasedData([...purchasedData, data]);
-      setLoading(true)
       Swal.fire({
         position: "center",
         icon: "success",

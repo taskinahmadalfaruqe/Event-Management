@@ -12,7 +12,7 @@ const ServiceDetails = () => {
   useEffect(()=>{
     Aos.init()
   },[])
-  const { isLoading, handelPurchasedData } = useContext(AuthContext);
+  const {  handelPurchasedData } = useContext(AuthContext);
 
   const [data, setData] = useState({});
   const singleData = useLoaderData();
@@ -46,14 +46,6 @@ const ServiceDetails = () => {
     const findData = singleData.find((value) => value.id == id);
     setData(findData);
   }, [id, singleData]);
-
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center h-[100vh] w-full">
-        <span className="loading loading-spinner loading-lg text-red-500"></span>
-      </div>
-    );
-  }
 
   const { description, title, image, price, willDo } = data;
   let count = 0;

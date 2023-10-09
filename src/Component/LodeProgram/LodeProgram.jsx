@@ -54,7 +54,7 @@ const LodeProgram = ({ singleData }) => {
           And More.......
         </div>
 
-        <Link className="inline-block z-50" to={`/cultural/${id}`}>
+        <Link className="inline-block" to={`/cultural/${id}`}>
           <button
             className="flex select-none items-center gap-2 border border-purple-500 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-purple-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             type="button"
