@@ -5,26 +5,27 @@ import { AuthContext } from "../../Provider/Provider";
 import Swal from "sweetalert2";
 
 const SignUp = () => {
-  const { userCreateWithEmailPassword } = useContext(AuthContext);
+  const { userCreateWithEmailPassword,handelManageUser,user } = useContext(AuthContext);
+  console.log(user)
   const location = useLocation();
   const navigate = useNavigate();
 
   const handelRegForm = (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    // eslint-disable-next-line no-unused-vars
-    const displayName = data.get("name");
-    const photo = data.get("photo");
+    const userName = data.get("name");
+    const photoURL = data.get("photo");
     const email = data.get("email");
     const password = data.get("password");
-    console.log(photo.name);
     if (
       /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)
+
     ) {
       userCreateWithEmailPassword(email, password)
         .then((res) => {
           if (res) {
             navigate(location.state ? location.state : "/");
+            handelManageUser(userName,photoURL)
             Swal.fire({
               position: "center",
               icon: "success",
@@ -52,6 +53,7 @@ const SignUp = () => {
         timer: 5000,
       });
     }
+    
   };
   return (
     <div>

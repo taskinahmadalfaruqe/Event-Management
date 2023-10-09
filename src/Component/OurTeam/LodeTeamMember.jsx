@@ -17,9 +17,9 @@ const LodeTeamMember = ({ singleData }) => {
   const { facebook, instagram, github, whatsapp } = social_media;
   return (
     <div
-      data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="2000"
+    data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="2000"
       className="teamCard transition-all duration-1000 p-5 border border-purple-500 rounded-md space-y-4"
     >
       <div className="img h-[285px] w-full overflow-hidden relative ">

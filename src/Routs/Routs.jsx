@@ -9,6 +9,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import PrivetRouts from "./PrivetRout";
 import Services from "../Pages/Services/Services";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import Contact from "../Pages/Contact/Contact";
 
 
 export const Routs = createBrowserRouter([
@@ -48,6 +49,10 @@ export const Routs = createBrowserRouter([
             path: '/cultural/:id',
             element: <PrivetRouts><ServiceDetails></ServiceDetails></PrivetRouts>,
             loader: ()=> fetch('/cultural.json'),
+        },
+        {
+            path: '/contact',
+            element: <Contact></Contact>,
         },
     ]
   },

@@ -41,6 +41,14 @@ const Footer = () => {
           </li>
           <li>
             <Link
+              to={"/contact"}
+              className="block  leading-relaxed  antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link
               to={"/purchased"}
               className="block  leading-relaxed  antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
             >
