@@ -18,7 +18,7 @@ const SignUp = () => {
     const email = data.get("email");
     const password = data.get("password");
     if (
-      /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)
 
     ) {
       userCreateWithEmailPassword(email, password)
