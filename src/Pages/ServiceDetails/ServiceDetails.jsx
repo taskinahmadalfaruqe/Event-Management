@@ -4,9 +4,14 @@ import NavBar from "../../Component/NavBar/NavBar";
 import { AuthContext } from "../../Provider/Provider";
 import Swal from 'sweetalert2'
 import Footer from "../../Component/Footer/Footer";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 
 const ServiceDetails = () => {
+  useEffect(()=>{
+    Aos.init()
+  },[])
   const { isLoading, handelPurchasedData } = useContext(AuthContext);
 
   const [data, setData] = useState({});
@@ -56,7 +61,7 @@ const ServiceDetails = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <div className=" mt-5 flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div data-aos="fade-up-right" data-aos-duration="2000" className=" mt-5 flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         
         <div className="p-2 md:p-5  overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
           <img

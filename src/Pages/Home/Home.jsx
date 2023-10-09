@@ -11,7 +11,7 @@ const Home = () => {
     <div className="rounded-md p-1">
       <Header></Header>
       <HomeServices data={data}></HomeServices>
-      <OurTeam></OurTeam>
+      <OurTeam ></OurTeam>
       <ClientReview></ClientReview>
       <Footer></Footer>
     </div>

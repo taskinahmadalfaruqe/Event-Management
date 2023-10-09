@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const LodeHomeData = ({ singleData }) => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   const { image, title, description, id, price } = singleData;
   return (
-    <div className="card  border border-purple-500 flex flex-col justify-between">
+    <div data-aos="zoom-in-down"  data-aos-duration="2000" className="card  border border-purple-500 flex flex-col justify-between">
       <figure className="h-64 w-full relative">
         <img src={image} alt="car!" className="h-full w-full " />
         <div className="absolute rounded-md bottom-2 right-2 bg-purple-600 opacity-70">

@@ -1,12 +1,18 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const LodeProgram = ({ singleData }) => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   const { description, id, title, image, price, willDo } = singleData;
   let count = 0;
 
   return (
-    <div className=" mt-5 relative flex flex-col  w-full  lg:flex-row rounded-xl bg-white bg-clip-border text-black shadow-md">
+    <div data-aos="fade-down-left" data-aos-duration="2000" className=" mt-5 relative flex flex-col  w-full  lg:flex-row rounded-xl bg-white bg-clip-border text-black shadow-md">
       <div className="relative p-2 w-full m-0 lg:w-2/5 shrink-0 overflow-hidden rounded-md rounded-r-none bg-white bg-clip-border">
         <img
           src={image}
