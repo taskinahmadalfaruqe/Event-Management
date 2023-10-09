@@ -53,7 +53,7 @@ const Footer = () => {
                 onClick={logout}
                 className="block  leading-relaxed  antialiased transition-colors hover:text-pink-500 focus:text-pink-500"
               >
-                Logout
+                LOGOUT
               </button>
             ) : (
               <Link
@@ -68,7 +68,7 @@ const Footer = () => {
       </div>
 
       <div className=" flex flex-col md:flex-row justify-center items-center gap-5 ">
-        <h2>Flow us on </h2>
+        <h2>Find Us On </h2>
         <div className="flex justify-center items-center gap-5 ">
           <Link to={"https://www.facebook.com/taskinahmadalfaruqe.2/"}>
             <div className="facebook instagram border border-pink-500 text-pink-500 font-bold hover:text-purple-800 bg-white w-10 h-10 rounded-full flex justify-center items-center">

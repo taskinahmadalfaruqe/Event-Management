@@ -53,7 +53,7 @@ const NavBar = () => {
         About
       </NavLink>
       <div className="flex flex-col lg:flex-row gap-5 justify-center items-center">
-        <div className="w-12 h-12 rounded-full bg-purple-500 overflow-hidden">
+        <div className="w-14 h-14 rounded-full border border-purple-500 overflow-hidden">
           {user?(user && (user.photoURL? <img className="h-full w-full" src={user.photoURL} alt="User" />: <img src="https://i.ibb.co/2nC8FF4/user.webp"></img> )) :(<img src="https://i.ibb.co/2nC8FF4/user.webp"></img> )}
         </div>
         <div>{user && (user.displayName ? user.displayName : user.email)}</div>

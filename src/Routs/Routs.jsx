@@ -9,7 +9,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import PrivetRouts from "./PrivetRout";
 import Services from "../Pages/Services/Services";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
-// import PrivetRouts from "./PrivetRout";
+
 
 export const Routs = createBrowserRouter([
   {
